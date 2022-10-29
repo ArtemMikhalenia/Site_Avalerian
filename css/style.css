@@ -1904,9 +1904,9 @@ body.ie .ibg img {
 	    -ms-transform: translate(-120%, 0px);
 	        transform: translate(-120%, 0px);
 	opacity: 0;
-	-webkit-transition: all 1s ease 1s;
-	-o-transition: all 1s ease 1s;
-	transition: all 1s ease 1s;
+	-webkit-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
 	border-left: 1px solid rgb(0, 229, 255);
 }
 .text1.active {
@@ -1922,9 +1922,9 @@ body.ie .ibg img {
 	    -ms-transform: translate(120%, 0px);
 	        transform: translate(120%, 0px);
 	opacity: 0;
-	-webkit-transition: all 1s ease 1s;
-	-o-transition: all 1s ease 1s;
-	transition: all 1s ease 1s;
+	-webkit-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
 }
 .text2.active {
 	-webkit-transform: translate(0px, 0px);
@@ -2187,23 +2187,27 @@ button.form-submit {
 .table {
 	display: inline-block;
 	max-width: 100%;
-	-webkit-transform: scale(0);
-	    -ms-transform: scale(0);
-	        transform: scale(0);
-	opacity: 0;
-	-webkit-transition: all 1s ease 0s;
-	-o-transition: all 1s ease 0s;
-	transition: all 1s ease 0s;
-}
-.table.active {
-	-webkit-transform: scale(1);
-	    -ms-transform: scale(1);
-	        transform: scale(1);
-	opacity: 1;
 }
 @media (max-width: 767.98px) {
 	.table {
 		display: block;
+	}
+}
+@media (min-width: 767.98px) {
+	.table {
+		-webkit-transform: scale(0);
+		    -ms-transform: scale(0);
+		        transform: scale(0);
+		opacity: 0;
+		-webkit-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}
+	.table.active {
+		-webkit-transform: scale(1);
+		    -ms-transform: scale(1);
+		        transform: scale(1);
+		opacity: 1;
 	}
 }
 
@@ -2289,6 +2293,19 @@ button.form-submit {
 		max-width: 100%;
 		padding: 22px 10px 22px 120.64px;
 		text-align: right;
+		-webkit-transform: translate(120%, 0px);
+		    -ms-transform: translate(120%, 0px);
+		        transform: translate(120%, 0px);
+		opacity: 0;
+		-webkit-transition: all 1s ease 0.2s;
+		-o-transition: all 1s ease 0.2s;
+		transition: all 1s ease 0.2s;
+	}
+	.table-us__body1.active {
+		-webkit-transform: translate(0px, 0px);
+		    -ms-transform: translate(0px, 0px);
+		        transform: translate(0px, 0px);
+		opacity: 1;
 	}
 }
 .table-us__body1:before {
@@ -2332,6 +2349,19 @@ button.form-submit {
 		max-width: 100%;
 		padding: 22px 10px 22px 120.64px;
 		text-align: right;
+		-webkit-transform: translate(120%, 0px);
+		    -ms-transform: translate(120%, 0px);
+		        transform: translate(120%, 0px);
+		opacity: 0;
+		-webkit-transition: all 1s ease 0.3s;
+		-o-transition: all 1s ease 0.3s;
+		transition: all 1s ease 0.3s;
+	}
+	.table-us__body.active {
+		-webkit-transform: translate(0px, 0px);
+		    -ms-transform: translate(0px, 0px);
+		        transform: translate(0px, 0px);
+		opacity: 1;
 	}
 }
 .table-us__body:before {
@@ -2378,6 +2408,19 @@ button.form-submit {
 		-webkit-text-fill-color: transparent;
 		font-size: 20px;
 		text-align: right;
+		-webkit-transform: translate(120%, 0px);
+		    -ms-transform: translate(120%, 0px);
+		        transform: translate(120%, 0px);
+		opacity: 0;
+		-webkit-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}
+	.table-us__col1.active {
+		-webkit-transform: translate(0px, 0px);
+		    -ms-transform: translate(0px, 0px);
+		        transform: translate(0px, 0px);
+		opacity: 1;
 	}
 }
 @media (max-width: 479.98px) {
@@ -2399,6 +2442,24 @@ button.form-submit {
 	background: linear-gradient(to right, rgb(1, 243, 253) 40%, rgb(255, 109, 193));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 767.98px) {
+	.tableRow3 {
+		-webkit-transform: translate(120%, 0px);
+		    -ms-transform: translate(120%, 0px);
+		        transform: translate(120%, 0px);
+		opacity: 0;
+		-webkit-transition: all 1s ease 0.4s;
+		-o-transition: all 1s ease 0.4s;
+		transition: all 1s ease 0.4s;
+	}
+	.tableRow3.active {
+		-webkit-transform: translate(0px, 0px);
+		    -ms-transform: translate(0px, 0px);
+		        transform: translate(0px, 0px);
+		opacity: 1;
+	}
 }
 
 tr,

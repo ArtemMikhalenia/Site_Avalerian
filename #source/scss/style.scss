@@ -685,7 +685,7 @@ body {
 .text1 {
 	transform: translate(-120%, 0px);
 	opacity: 0;
-	transition: all 1s ease 1s;
+	transition: all 1s ease 0s;
 	border-left: 1px solid rgba(0, 229, 255, 1);
 
 	&.active {
@@ -698,7 +698,7 @@ body {
 	border-left: 1px solid rgba(255, 131, 183, 1);
 	transform: translate(120%, 0px);
 	opacity: 0;
-	transition: all 1s ease 1s;
+	transition: all 1s ease 0s;
 
 	&.active {
 		transform: translate(0px, 0px);
@@ -939,17 +939,19 @@ button.form-submit {
 	//-webkit-overflow-scrolling: touch;
 	//vertical-align: top;
 
-	transform: scale(0);
-	opacity: 0;
-	transition: all 1s ease 0s;
-
-	&.active {
-		transform: scale(1);
-		opacity: 1;
-	}
-
 	@media (max-width: $md3+px) {
 		display: block;
+	}
+
+	@media (min-width: $md3+px) {
+		transform: scale(0);
+		opacity: 0;
+		transition: all 1s ease 0s;
+
+		&.active {
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
 }
 
@@ -1026,6 +1028,15 @@ button.form-submit {
 			max-width: 100%;
 			padding: 22px 10px 22px 120.64px;
 			text-align: right;
+
+			transform: translate(120%, 0px);
+			opacity: 0;
+			transition: all 1s ease 0.2s;
+
+			&.active {
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
 		}
 
 		&:before {
@@ -1068,6 +1079,15 @@ button.form-submit {
 			max-width: 100%;
 			padding: 22px 10px 22px 120.64px;
 			text-align: right;
+
+			transform: translate(120%, 0px);
+			opacity: 0;
+			transition: all 1s ease 0.3s;
+
+			&.active {
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
 		}
 
 		&:before {
@@ -1111,6 +1131,15 @@ button.form-submit {
 			-webkit-text-fill-color: transparent;
 			font-size: 20px;
 			text-align: right;
+
+			transform: translate(120%, 0px);
+			opacity: 0;
+			transition: all 1s ease 0s;
+
+			&.active {
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
 		}
 
 		@media (max-width: $md4+px) {
@@ -1134,6 +1163,18 @@ button.form-submit {
 	}
 }
 
+.tableRow3 {
+	@media (max-width: $md3+px) {
+		transform: translate(120%, 0px);
+		opacity: 0;
+		transition: all 1s ease 0.4s;
+
+		&.active {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+}
 
 tr,
 td {
