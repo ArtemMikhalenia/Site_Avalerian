@@ -1,0 +1,97 @@
+footer {}
+
+//====================================================================================================
+.footer {
+   background-color: rgba(0, 0, 0, 1);
+
+   &__container {
+      max-width: 1240px;
+      margin: 0 auto;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0px 40px 0px;
+      margin: 0px 35px 0px 10px;
+
+      @media (max-width: $md4+px) {
+         flex-direction: column-reverse;
+         margin: 0px 0px 0px 0px;
+         row-gap: 10px;
+         padding: 20px 0px 10px 0px;
+      }
+   }
+
+   &__text {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(231, 233, 247, 1);
+   }
+
+   &__logo {
+      animation: logo 2s ease infinite normal 0s;
+   }
+
+   &__button {
+      position: relative;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(231, 233, 247, 1);
+      background-color: transparent;
+      transition: all 0.3s ease 0s;
+
+      &:after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         background: url('../img/Footer/Arrow.png') 16px no-repeat;
+         animation: arrow 2s ease infinite normal 0s;
+      }
+
+      &:hover {
+         transform: scale(1.1);
+      }
+
+      @media (max-width: $md4+px) {
+         margin: 0px 10px 0px 0px;
+      }
+   }
+}
+
+@keyframes arrow {
+   0% {
+      transform: translateY(0px);
+   }
+
+   50% {
+      transform: translateY(-10px);
+   }
+
+   100% {
+      transform: translateY(0px);
+   }
+}
+
+@keyframes logo {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.15);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+//====================================================================================================
