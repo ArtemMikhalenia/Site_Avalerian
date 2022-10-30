@@ -1474,7 +1474,6 @@ button.form-submit {
 }
 
 .table {
-	display: inline-block;
 	max-width: 100%;
 }
 @media (max-width: 767.98px) {

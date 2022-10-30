@@ -930,7 +930,6 @@ button.form-submit {
 //<US>====================================================================================================
 
 .table {
-	display: inline-block;
 	max-width: 100%;
 	//overflow-x: auto;
 	//-webkit-overflow-scrolling: touch;
@@ -1005,8 +1004,6 @@ button.form-submit {
 
 .table-us {
 	width: 100%;
-
-	@media (max-width: $md3+px) {}
 
 	&__body1 {
 		position: relative;
