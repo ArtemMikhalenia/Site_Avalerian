@@ -3354,179 +3354,49 @@ td {
 	        transform: scale(1.2);
 }
 
-input[class=form-touch__input]::-webkit-input-placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class=form-touch__input]::-moz-placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class=form-touch__input]:-ms-input-placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class=form-touch__input]::-ms-input-placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class=form-touch__input]::placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class=form-names__input]::-webkit-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
+input[class=form-touch__input]::-webkit-input-placeholder, input[class=form-names__input]::-webkit-input-placeholder, input[class=form-lastnames__input]::-webkit-input-placeholder, input[class=form-emails__input]::-webkit-input-placeholder, input[class=form-web__input]::-webkit-input-placeholder, textarea[class=form-textarea__input]::-webkit-input-placeholder {
 	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class=form-names__input]::-moz-placeholder {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
-input[class=form-names__input]:-ms-input-placeholder {
+input[class=form-touch__input]::-moz-placeholder, input[class=form-names__input]::-moz-placeholder, input[class=form-lastnames__input]::-moz-placeholder, input[class=form-emails__input]::-moz-placeholder, input[class=form-web__input]::-moz-placeholder, textarea[class=form-textarea__input]::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
-input[class=form-names__input]::-ms-input-placeholder {
+input[class=form-touch__input]:-ms-input-placeholder, input[class=form-names__input]:-ms-input-placeholder, input[class=form-lastnames__input]:-ms-input-placeholder, input[class=form-emails__input]:-ms-input-placeholder, input[class=form-web__input]:-ms-input-placeholder, textarea[class=form-textarea__input]:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
-input[class=form-names__input]::placeholder {
+input[class=form-touch__input]::-ms-input-placeholder, input[class=form-names__input]::-ms-input-placeholder, input[class=form-lastnames__input]::-ms-input-placeholder, input[class=form-emails__input]::-ms-input-placeholder, input[class=form-web__input]::-ms-input-placeholder, textarea[class=form-textarea__input]::-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
-input[class=form-emails__input]::-webkit-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class=form-emails__input]::-moz-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class=form-emails__input]:-ms-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class=form-emails__input]::-ms-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class=form-emails__input]::placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-textarea[class=form-textarea__input]::-webkit-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-textarea[class=form-textarea__input]::-moz-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-textarea[class=form-textarea__input]:-ms-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-textarea[class=form-textarea__input]::-ms-input-placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
+input[class=form-touch__input]::placeholder,
+input[class=form-names__input]::placeholder,
+input[class=form-lastnames__input]::placeholder,
+input[class=form-emails__input]::placeholder,
+input[class=form-web__input]::placeholder,
 textarea[class=form-textarea__input]::placeholder {
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
 .column-form {

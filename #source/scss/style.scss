@@ -1987,39 +1987,17 @@ td {
 	}
 }
 
-input[class="form-touch__input"]::placeholder {
-	color: rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-}
-
-input[class="form-names__input"]::placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-input[class="form-emails__input"]::placeholder {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 21px;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
-}
-
+input[class="form-touch__input"]::placeholder,
+input[class="form-names__input"]::placeholder,
+input[class="form-lastnames__input"]::placeholder,
+input[class="form-emails__input"]::placeholder,
+input[class="form-web__input"]::placeholder,
 textarea[class="form-textarea__input"]::placeholder {
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
 	letter-spacing: 0.02em;
-	text-align: left;
-	color: rgba(255, 255, 255, 0.8);
 }
 
 .column-form {
