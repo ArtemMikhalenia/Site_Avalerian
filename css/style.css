@@ -569,12 +569,12 @@ body.lock {
 	text-align: center;
 	background-color: transparent;
 	border: 2px solid;
-	-o-border-image: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
-	   border-image: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-	   border-image: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
+	-o-border-image: conic-gradient(from var(--angle), rgb(1, 243, 253), rgb(255, 109, 193) 45deg, rgb(255, 109, 193) 90deg, rgb(1, 243, 253));
+	   border-image: conic-gradient(from var(--angle), rgb(1, 243, 253), rgb(255, 109, 193) 45deg, rgb(255, 109, 193) 90deg, rgb(1, 243, 253));
 	border-image-slice: 1;
 	padding: 16px 42px;
 	z-index: 10;
+	--angle: 0deg;
 }
 .mainblock__button a {
 	color: rgba(255, 255, 255, 0.8);
@@ -586,8 +586,8 @@ body.lock {
 	-webkit-transform: scale(1.02);
 	    -ms-transform: scale(1.02);
 	        transform: scale(1.02);
-	-webkit-animation: gradient 1.5s linear infinite normal 0s;
-	        animation: gradient 1.5s linear infinite normal 0s;
+	-webkit-animation: rotate 4s linear infinite normal 0s;
+	        animation: rotate 4s linear infinite normal 0s;
 }
 .mainblock .mainblock__btn {
 	-webkit-transform: translate(0px, 120%);
@@ -605,66 +605,48 @@ body.lock {
 	opacity: 1;
 }
 
-@-webkit-keyframes gradient {
-	0% {
-		border-image: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		border-image: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	25% {
-		border-image: -webkit-gradient(linear, left bottom, left top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		border-image: linear-gradient(to top, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	50% {
-		border-image: -webkit-gradient(linear, right top, left top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		border-image: linear-gradient(to left, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	75% {
-		border-image: -webkit-gradient(linear, left top, left bottom, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		border-image: linear-gradient(to bottom, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	100% {
-		border-image: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		border-image: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
+@-webkit-keyframes rotate {
+	to {
+		--angle: 360deg;
 	}
 }
 
-@keyframes gradient {
-	0% {
-		-o-border-image: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
-		   border-image: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		   border-image: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	25% {
-		-o-border-image: -o-linear-gradient(bottom, rgb(1, 243, 253), rgb(255, 109, 193));
-		   border-image: -webkit-gradient(linear, left bottom, left top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		   border-image: linear-gradient(to top, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	50% {
-		-o-border-image: -o-linear-gradient(right, rgb(1, 243, 253), rgb(255, 109, 193));
-		   border-image: -webkit-gradient(linear, right top, left top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		   border-image: linear-gradient(to left, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	75% {
-		-o-border-image: -o-linear-gradient(top, rgb(1, 243, 253), rgb(255, 109, 193));
-		   border-image: -webkit-gradient(linear, left top, left bottom, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		   border-image: linear-gradient(to bottom, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
-	}
-	100% {
-		-o-border-image: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
-		   border-image: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
-		   border-image: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
-		border-image-slice: 1;
+@keyframes rotate {
+	to {
+		--angle: 360deg;
 	}
 }
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+/*@keyframes gradient {
+	0% {
+		border-image: conic-gradient(0deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1) 45deg, rgba(255, 109, 193, 1) 90deg, rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
+	}
+
+	/*25% {
+		border-image: conic-gradient(-90deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
+	}
+
+	50% {
+		border-image: conic-gradient(-180deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
+	}
+
+	75% {
+		border-image: conic-gradient(-270deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
+	}
+
+	100% {
+		border-image: conic-gradient(360deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1) 45deg, rgba(255, 109, 193, 1) 90deg, rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
+	}
+}*/
 .char {
 	margin: 0px 10px 99px 10px;
 }
@@ -2881,6 +2863,12 @@ textarea.form-textarea__input:focus {
 }
 
 .form-submitbtn__input {
+	font-family: Encode Sans;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 21px;
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.8);
 	text-align: center;
 	background-color: rgb(0, 0, 0);
 	cursor: pointer;

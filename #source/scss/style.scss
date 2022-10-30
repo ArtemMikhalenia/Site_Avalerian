@@ -207,10 +207,11 @@ body {
 		text-align: center;
 		background-color: transparent;
 		border: 2px solid;
-		border-image: linear-gradient(to right, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
+		border-image: conic-gradient(from var(--angle), rgba(1, 243, 253, 1), rgba(255, 109, 193, 1) 45deg, rgba(255, 109, 193, 1) 90deg, rgba(1, 243, 253, 1));
 		border-image-slice: 1;
 		padding: 16px 42px;
 		z-index: 10;
+		--angle: 0deg;
 
 		a {
 			color: rgba(255, 255, 255, 0.8);
@@ -219,7 +220,7 @@ body {
 		&:hover {
 			transition: all 0.4s ease 0s;
 			transform: scale(1.02);
-			animation: gradient 1.5s linear infinite normal 0s;
+			animation: rotate 4s linear infinite normal 0s;
 		}
 	}
 
@@ -235,32 +236,44 @@ body {
 	}
 }
 
-@keyframes gradient {
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+/*@keyframes gradient {
 	0% {
-		border-image: linear-gradient(to right, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
-		border-image-slice: 1;
+		border-image: conic-gradient(0deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1) 45deg, rgba(255, 109, 193, 1) 90deg, rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
 	}
 
-	25% {
-		border-image: linear-gradient(to top, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
-		border-image-slice: 1;
+	/*25% {
+		border-image: conic-gradient(-90deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
 	}
 
 	50% {
-		border-image: linear-gradient(to left, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
-		border-image-slice: 1;
+		border-image: conic-gradient(-180deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
 	}
 
 	75% {
-		border-image: linear-gradient(to bottom, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
-		border-image-slice: 1;
+		border-image: conic-gradient(-270deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1), rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
 	}
 
 	100% {
-		border-image: linear-gradient(to right, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1));
-		border-image-slice: 1;
+		border-image: conic-gradient(360deg, rgba(1, 243, 253, 1), rgba(255, 109, 193, 1) 45deg, rgba(255, 109, 193, 1) 90deg, rgba(1, 243, 253, 1));
+		//border-image-slice: 1;
 	}
-}
+}*/
 
 //</MAINBLOCK>====================================================================================================
 //<CHAR>====================================================================================================
@@ -2177,6 +2190,12 @@ textarea.form-textarea__input:focus {
 .form-submitbtn {
 
 	&__input {
+		font-family: Encode Sans;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: rgba(255, 255, 255, 0.8);
 		text-align: center;
 		background-color: rgba(0, 0, 0, 1);
 		cursor: pointer;
