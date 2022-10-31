@@ -2340,6 +2340,12 @@ button.form-submit {
 	height: 48.8px;
 	background-color: rgb(0, 0, 0);
 }
+@media (max-width: 767.98px) {
+	button.form-submit {
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
+}
 
 .form-submit {
 	margin: 0px 17px 0px 0px;
@@ -2927,6 +2933,12 @@ td {
 	letter-spacing: 0.02em;
 	padding: 16px 57.5px;
 	color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 767.98px) {
+	.column-process__button {
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
 }
 @media (min-width: 767.98px) {
 	.column-process__button:hover {
@@ -3745,6 +3757,12 @@ textarea[class=form-textarea__input]::placeholder {
 	-webkit-transition: all 0.4s ease 0s;
 	-o-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
+}
+@media (max-width: 767.98px) {
+	.column-form__submit {
+		-webkit-animation: gradient 10s linear infinite normal 0s;
+		        animation: gradient 10s linear infinite normal 0s;
+	}
 }
 @media (min-width: 767.98px) {
 	.column-form__submit:hover {
