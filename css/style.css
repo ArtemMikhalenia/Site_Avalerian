@@ -575,19 +575,19 @@ body.lock {
 	border-image-slice: 1;
 	padding: 16px 42px;
 	z-index: 10;
-}
-.mainblock__button a {
 	color: rgba(255, 255, 255, 0.8);
 }
-.mainblock__button:hover {
-	-webkit-transition: all 0.4s ease 0s;
-	-o-transition: all 0.4s ease 0s;
-	transition: all 0.4s ease 0s;
-	-webkit-transform: scale(1.02);
-	    -ms-transform: scale(1.02);
-	        transform: scale(1.02);
-	-webkit-animation: gradient 10s linear infinite normal 0s;
-	        animation: gradient 10s linear infinite normal 0s;
+@media (min-width: 767.98px) {
+	.mainblock__button:hover {
+		-webkit-transition: all 0.4s ease 0s;
+		-o-transition: all 0.4s ease 0s;
+		transition: all 0.4s ease 0s;
+		-webkit-transform: scale(1.02);
+		    -ms-transform: scale(1.02);
+		        transform: scale(1.02);
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
 }
 .mainblock .mainblock__btn {
 	-webkit-transform: translate(0px, 120%);
@@ -603,6 +603,16 @@ body.lock {
 	    -ms-transform: translate(0px, 0px);
 	        transform: translate(0px, 0px);
 	opacity: 1;
+}
+
+button.mainblock__button {
+	background: transparent;
+}
+
+button.mainblock__button.active {
+	background: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
+	background: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
+	background: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
 }
 
 /*@keyframes rotate {
@@ -2328,15 +2338,20 @@ button.form-submit {
 .form-submit {
 	margin: 0px 17px 0px 0px;
 }
-.form-submit:hover {
-	-webkit-transform: scale(1.02);
-	    -ms-transform: scale(1.02);
-	        transform: scale(1.02);
-	-webkit-animation: gradient 10s linear infinite normal 0s;
-	        animation: gradient 10s linear infinite normal 0s;
+@media (min-width: 767.98px) {
+	.form-submit:hover {
+		-webkit-transition: all 0.4s ease 0s;
+		-o-transition: all 0.4s ease 0s;
+		transition: all 0.4s ease 0s;
+		-webkit-transform: scale(1.02);
+		    -ms-transform: scale(1.02);
+		        transform: scale(1.02);
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
 }
 .form-submit__input {
-	background-color: rgb(0, 0, 0);
+	background-color: transparent;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 21px;
@@ -2345,6 +2360,13 @@ button.form-submit {
 	padding: 0px 56.37px;
 	color: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
+}
+
+button.form-submit.active {
+	background-color: none;
+	background: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
+	background: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
+	background: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
 }
 
 .table {
@@ -2898,21 +2920,27 @@ td {
 	line-height: 21px;
 	letter-spacing: 0.02em;
 	padding: 16px 57.5px;
-}
-.column-process__button a {
 	color: rgba(255, 255, 255, 0.8);
 }
-.column-process__button:hover {
-	-webkit-transform: scale(1.02);
-	    -ms-transform: scale(1.02);
-	        transform: scale(1.02);
-	-webkit-animation: gradient 10s linear infinite normal 0s;
-	        animation: gradient 10s linear infinite normal 0s;
+@media (min-width: 767.98px) {
+	.column-process__button:hover {
+		-webkit-transform: scale(1.02);
+		    -ms-transform: scale(1.02);
+		        transform: scale(1.02);
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
 }
 @media (max-width: 479.98px) {
 	.column-process__button {
 		width: 100%;
 	}
+}
+
+button.column-process__button.active {
+	background: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
+	background: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
+	background: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
 }
 
 .process__column {
@@ -3712,12 +3740,23 @@ textarea[class=form-textarea__input]::placeholder {
 	-o-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
 }
-.column-form__submit:hover {
-	-webkit-transform: scale(1.02);
-	    -ms-transform: scale(1.02);
-	        transform: scale(1.02);
-	-webkit-animation: gradient 10s linear infinite normal 0s;
-	        animation: gradient 10s linear infinite normal 0s;
+@media (min-width: 767.98px) {
+	.column-form__submit:hover {
+		-webkit-transform: scale(1.02);
+		    -ms-transform: scale(1.02);
+		        transform: scale(1.02);
+		-webkit-animation: gradient 10s linear infinite normal 0s;
+		        animation: gradient 10s linear infinite normal 0s;
+	}
+}
+.column-form__submit input {
+	background-color: transparent;
+}
+
+button.column-form__submit.active {
+	background: -webkit-gradient(linear, left top, right top, from(rgb(1, 243, 253)), to(rgb(255, 109, 193)));
+	background: -o-linear-gradient(left, rgb(1, 243, 253), rgb(255, 109, 193));
+	background: linear-gradient(to right, rgb(1, 243, 253), rgb(255, 109, 193));
 }
 
 .form-names__input {

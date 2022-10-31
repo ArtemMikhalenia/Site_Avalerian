@@ -145,3 +145,28 @@ if (animItems.length > 0) {
       animOnScroll();
    }, 100);
 }
+
+//Нажатие кнопки
+const buttonOnClick = document.querySelectorAll('.button');
+//const buttonSubmit  = document.
+
+buttonOnClick[0].addEventListener('click', buttonClick0);
+buttonOnClick[1].addEventListener('click', buttonClick1);
+buttonOnClick[2].addEventListener('click', buttonClick2);
+buttonOnClick[3].addEventListener('click', buttonClick3);
+
+function buttonClick0() {
+   buttonOnClick[0].classList.add("active");
+}
+
+function buttonClick1() {
+   buttonOnClick[1].classList.add("active");
+}
+
+function buttonClick2() {
+   buttonOnClick[2].classList.add("active");
+}
+
+function buttonClick3() {
+   buttonOnClick[3].classList.add("active");
+}
