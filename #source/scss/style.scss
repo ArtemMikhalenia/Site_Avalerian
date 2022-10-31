@@ -215,6 +215,10 @@ body {
 		//--angle: 0deg;
 		color: rgba(255, 255, 255, 0.8);
 
+		@media (max-width: $md3+px) {
+			animation: gradient 5s linear infinite normal 0s;
+		}
+
 		@media (min-width: $md3+px) {
 			&:hover {
 				transition: all 0.4s ease 0s;
@@ -2641,6 +2645,8 @@ textarea[class="form-textarea__input"]::placeholder {
 				animation: gradient 10s linear infinite normal 0s;
 			}
 		}
+
+
 
 		input {
 			background-color: transparent;

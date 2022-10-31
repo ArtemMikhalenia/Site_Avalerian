@@ -577,6 +577,12 @@ body.lock {
 	z-index: 10;
 	color: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 767.98px) {
+	.mainblock__button {
+		-webkit-animation: gradient 5s linear infinite normal 0s;
+		        animation: gradient 5s linear infinite normal 0s;
+	}
+}
 @media (min-width: 767.98px) {
 	.mainblock__button:hover {
 		-webkit-transition: all 0.4s ease 0s;
